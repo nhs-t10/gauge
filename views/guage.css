@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100italic,700);
+
+body {
+	background-color: #282E3D;
+	font-family: "Roboto", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+header {
+	background-color: #009CFF;
+	padding: 0.5em;
+}
+
+h1 {
+	margin-left: 1em;
+	color: #FFFFFF;
+}
+
+p {
+	margin: 0;
+}
+
+.colset {
+	display: flex;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.colset > div:first-child {
+	margin-right: 20px;
+}
+
+.col {
+	width: 50%;
+	margin: 2em;
+	padding: 2em;
+	background-color: #FFFFFF;
+}
+
+.col > pre {
+	background-color: #2B2B2B;
+	color: #FFFFFF;
+	padding: 1em;
+}
+
+.description {
+	font-size: 1.5em;
+}
+.inputGroup {
+	margin: 10px;
+}
+.inputGroup label {
+	color: #4F4F4F;
+	font-size: 1em;
+}
+input {
+	margin-left: 10px;
+	font-size: 1em;
+}
+#button {
+	border-radius: 5px;
+	border: 1px solid #910097;
+	color: #910097;
+	padding: 1em;
+	margin-top: 2em;
+	cursor: pointer;
+	text-align: center;
+	transition: 0.2s;
+}
+#button:hover {
+	background-color: #910097;
+	color: #FFFFFF;
+	transition: 0.2s;
+}

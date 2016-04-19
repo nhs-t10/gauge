@@ -7,8 +7,6 @@ exports.get = (callback) => {
 	callback(manifest.params.position);
 };
 
-exports.updateParams = (params) => {
-	manifest.params = params;
-	fs.writeFileSync("./manifest.json", JSON.stringify(manifest));
+exports.updateParams = () => {
 	manifest = require("./manifest");
 };

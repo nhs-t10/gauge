@@ -1,7 +1,23 @@
 html
 	head
 		style
-			include index.css
-		title= "Guage - " + guage
+			include guage.css
+		title= "Guage - " + name
 	body
-		h1= guage
+		header
+			h1#h= name
+		div.colset
+			div.col
+				p poop
+			div.col
+				p.description= description
+				pre= "Interval: " + interval/1000 + " secs"
+				h2 Parameters
+				div#params
+					each param,title in params
+						div.inputGroup
+							label= title
+							input(type="text" value=param)
+				div#button Save & Use!
+		script
+			include selector.js
