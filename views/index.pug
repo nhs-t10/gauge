@@ -1,0 +1,11 @@
+html
+	head
+		style
+			include index.css
+		title Guage
+	body
+		h1 Choose your Guage
+		each guage in guages
+			a(href="/guages/" + guage)
+				div.guageCard
+					li= guage
