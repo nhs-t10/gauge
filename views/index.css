@@ -14,7 +14,23 @@ h1 {
 	font-size: 3em;
 }
 
-.guageCard {
+.welcome {
+	float: left;
+	position: absolute;
+	margin: 0;
+	font-weight: 300;
+	color: #FFFFFF;
+}
+
+.welcome > h2 {
+	display: inline;
+}
+
+.welcome > img {
+	width: 50px;
+}
+
+.gaugeCard {
 	border-radius: 15px;
 	background-color: #FFFFFF;
 	width: 200px;

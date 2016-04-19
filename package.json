@@ -1,27 +1,28 @@
 {
-  "name": "guage",
+  "name": "gauge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhs-t10/guage.git"
+    "url": "git+https://github.com/nhs-t10/gauge.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nhs-t10/guage/issues"
+    "url": "https://github.com/nhs-t10/gauge/issues"
   },
-  "homepage": "https://github.com/nhs-t10/guage#readme",
+  "homepage": "https://github.com/nhs-t10/gauge#readme",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "particle-api-js": "^5.2.6",
     "pug": "^2.0.0-alpha6",
+    "twitter": "^1.2.5",
     "wundergroundnode": "^0.9.0"
   }
 }

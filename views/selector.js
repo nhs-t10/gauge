@@ -5,7 +5,7 @@ document.querySelector("#save").onclick = function() {
 		datas[nodes[i].getElementsByTagName("label")[0].innerHTML] = nodes[i].getElementsByTagName("input")[0].value;
 	}
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "/setguage/" + document.querySelector("#h").innerHTML, true);
+	xhr.open("POST", "/setgauge/" + document.querySelector("#h").innerHTML, true);
 	xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
 
 	xhr.send(JSON.stringify(datas));

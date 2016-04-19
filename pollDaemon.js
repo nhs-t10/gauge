@@ -6,17 +6,17 @@ exports.init = (p, t, id) => {
 	deviceId = id,
 	token = t;
 };
-exports.poll = (guage) => {
+exports.poll = (gauge) => {
 	if(interval) clearInterval(interval);
-	const md = require(`./guages/${guage}`);
-	const manifest = require(`./guages/${guage}/manifest`);
-	md.get(sendToGuage);
+	const md = require(`./gauges/${gauge}`);
+	const manifest = require(`./gauges/${gauge}/manifest`);
+	md.get(sendTogauge);
 	interval = setInterval(() => {
-		md.get(sendToGuage);
+		md.get(sendTogauge);
 	}, manifest.interval);
 };
 
-const sendToGuage = (value) => {
+const sendTogauge = (value) => {
 	console.log(value);
 	particle.callFunction({deviceId, name: "servo", argument: value, auth: token});
 };

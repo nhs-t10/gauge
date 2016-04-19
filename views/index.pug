@@ -2,11 +2,13 @@ html
 	head
 		style
 			include index.css
-		title Guage
+		title gauge
 	body
-		h1 Choose your Guage
-		each guage in guages
-			a(href="/guages/" + guage)
-				div.guageCard
-					img(src="/images/" + guage + ".png").preview
-					div.name= guage
+		div.welcome
+			img(src="cart.png")
+		h1 Choose your gauge
+		each gauge in gauges
+			a(href="/gauges/" + gauge)
+				div.gaugeCard
+					img(src="/images/" + gauge + ".png").preview
+					div.name= gauge
