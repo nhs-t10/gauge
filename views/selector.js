@@ -6,7 +6,7 @@ document.querySelector("#save").onclick = function() {
 	}
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", "/setguage/" + document.querySelector("#h").innerHTML, true);
-	xhr.setRequestHeader("Content-Type', 'application/json; charset=UTF-8");
+	xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
 
 	xhr.send(JSON.stringify(datas));
 
