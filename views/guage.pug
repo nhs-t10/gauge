@@ -11,6 +11,8 @@ html
 		div.colset
 			div.col
 				img(src="/images/" + name + ".png").preview
+				a(href="/images/" + name + ".png" target="_blank")
+					div.button Print!
 			div.col
 				p.description= description
 				pre= "Interval: " + interval/1000 + " secs"
@@ -20,6 +22,6 @@ html
 						div.inputGroup
 							label= title
 							input(type="text" value=param)
-				div#button Save & Use!
+				div.button#save Save & Use!
 		script
 			include selector.js

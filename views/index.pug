@@ -8,4 +8,5 @@ html
 		each guage in guages
 			a(href="/guages/" + guage)
 				div.guageCard
-					li= guage
+					img(src="/images/" + guage + ".png").preview
+					div.name= guage
