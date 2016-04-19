@@ -1,7 +1,7 @@
 "use strict";
 
-const	fs = require("fs"),
-	wundernode = require("wundergroundnode");
+
+const	wundernode = require("wundergroundnode");
 let manifest = require("./manifest");
 let wunder = new wundernode(manifest.params.wundergroundApiKey);
 
