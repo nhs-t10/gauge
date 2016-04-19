@@ -23,7 +23,7 @@ let begin = () => {
 		stream.on("data", (tweet) => {
 			//console.log(tweet)
 			volume++;
-			rate = (manifest.params.tweetsPerHour/180) * volume;
+			rate = (180/manifest.params.tweetsPerHour) * volume;
 		});
 		stream.on("error", function(error) {
 			throw error;
