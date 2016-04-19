@@ -8,17 +8,22 @@ let client = new Twitter({
 	access_token_secret: manifest.params.accessTokenSecret
 });
 
-let stream;
+let Stream;
+let volume = 0;
+let rate = 0;
+let interval;
 
 exports.get = (callback) => {
-
-	callback(0);
+	callback(rate);
 };
 
 let begin = () => {
-	stream = client.stream("statuses/filter", {track: `#${manifest.params.hashtag.replace(/\#/g, "")}`}, (stream) => {
+	client.stream("statuses/filter", {track: `${manifest.params.hashtag}`}, (stream) => {
+		Stream = stream;
 		stream.on("data", (tweet) => {
-			console.log(tweet.text);
+			//console.log(tweet)
+			volume++;
+			rate = (manifest.params.tweetsPerHour/180) * volume;
 		});
 		stream.on("error", function(error) {
 			throw error;
@@ -28,15 +33,22 @@ let begin = () => {
 
 exports.updateParams = () => {
 	manifest = require("./manifest");
-	if(stream) {
-		console.log(stream);
-		stream.destroy();
+	if(Stream) {
+		Stream.destroy();
 	}
-	client = new Twitter({
-		consumer_key: manifest.params.consumerKey,
-		consumer_secret: manifest.params.consumerSecret,
-		access_token_key: manifest.params.accessToken,
-		access_token_secret: manifest.params.accessTokenSecret
-	});
-	begin();
+	if(interval) clearInterval(interval);
+	setTimeout(() => {
+		client = new Twitter({
+			consumer_key: manifest.params.consumerKey,
+			consumer_secret: manifest.params.consumerSecret,
+			access_token_key: manifest.params.accessToken,
+			access_token_secret: manifest.params.accessTokenSecret
+		});
+		begin();
+	}, 1000 + Math.random());
+	volume = 0;
+	rate = 0;
+	setInterval(() => {
+		volume = 0;
+	}, 60 * 60 * 1000);
 };

@@ -14,17 +14,17 @@ exports.get = (callback) => {
 			switch(forecast) {
 			case "clear":
 			case "sunny":
-				pos = 0;
+				pos = 20;
 				break;
 			case "mostlysunny":
 			case "partlycloudy":
 			case "hazy":
 			case "partlysunny" :
-				pos = 25;
+				pos = 70;
 				break;
 			case "cloudy":
 			case "mostlycloudy":
-				pos = 65;
+				pos = 150;
 				break;
 			case "chanceflurries":
 			case "chancerain":
@@ -38,7 +38,7 @@ exports.get = (callback) => {
 			case "snow":
 			case "tstorms":
 			case "unknown":
-				pos = 85;
+				pos = 180;
 				break;
 			default:
 				pos = 45;

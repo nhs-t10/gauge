@@ -10,13 +10,16 @@ exports.poll = (gauge) => {
 	if(interval) clearInterval(interval);
 	const md = require(`./gauges/${gauge}`);
 	const manifest = require(`./gauges/${gauge}/manifest`);
-	md.get(sendTogauge);
+	md.get(sendToGauge);
 	interval = setInterval(() => {
-		md.get(sendTogauge);
+		md.get(sendToGauge);
 	}, manifest.interval);
 };
 
-const sendTogauge = (value) => {
-	console.log(value);
-	particle.callFunction({deviceId, name: "servo", argument: value, auth: token});
+const sendToGauge = (value) => {
+	const query = {deviceId: deviceId, name: "servo", argument: value.toString(), auth: token};
+	particle.callFunction(query).then(() => {
+	}, (err) => {
+		if(err) console.log(err);
+	});
 };
