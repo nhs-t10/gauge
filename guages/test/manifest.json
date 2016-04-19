@@ -1,0 +1,8 @@
+{
+	"name": "test",
+	"description": "test guage pls ignore",
+	"interval": 150000,
+	"params": {
+		"position": 0
+	}
+}

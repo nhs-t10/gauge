@@ -1,0 +1,9 @@
+{
+	"name": "weather",
+	"description": "Track the weather!",
+	"interval": 900000,
+	"params": {
+		"wundergroundApiKey": "",
+		"zipCode": ""
+	}
+}

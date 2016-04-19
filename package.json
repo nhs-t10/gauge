@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/nhs-t10/guage#readme",
   "dependencies": {
-    "particle-api-js": "^5.2.6"
+    "express": "^4.13.4",
+    "particle-api-js": "^5.2.6",
+    "wundergroundnode": "^0.9.0"
   }
 }
