@@ -5,6 +5,8 @@ const webServer = require("./webServer"),
 	particle = new Particle(),
 	config = require("./config");
 
+webServer.setUpdate(pollDaemon.poll);
+
 let token;
 
 particle.login(config.particle).then((data) => {
@@ -13,7 +15,7 @@ particle.login(config.particle).then((data) => {
 }).then((data) => {
 	const deviceId = data.body[0].id;
 	pollDaemon.init(particle, token, deviceId);
-	pollDaemon.poll(require("./guages/test/manifest"));
+	pollDaemon.poll("test");
 })
 .catch((err) => {
 	console.err(err);

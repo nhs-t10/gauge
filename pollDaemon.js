@@ -8,11 +8,12 @@ exports.init = (p, t, id) => {
 };
 exports.poll = (guage) => {
 	if(interval) clearInterval(interval);
-	const md = require(`./guages/${guage.name}`);
+	const md = require(`./guages/${guage}`);
+	const manifest = require(`./guages/${guage}/manifest`);
 	md.get(sendToGuage);
 	interval = setInterval(() => {
 		md.get(sendToGuage);
-	}, guage.interval);
+	}, manifest.interval);
 };
 
 const sendToGuage = (value) => {

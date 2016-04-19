@@ -10,6 +10,12 @@ const guages = fs.readdirSync("./guages").filter((file) => {
 	return fs.statSync(path.join("./guages", file)).isDirectory();
 });
 
+let update;
+
+exports.setUpdate = (fn) => {
+	update = fn;
+}
+
 app.set("view engine", "pug");
 app.use(express.static("static"));
 app.use(bodyParser.json());
@@ -33,7 +39,7 @@ app.post("/setguage/:guage", (req, res) => {
 		let program = require(`./guages/${req.params.guage}`);
 		program.updateParams();
 
-		//TODO: use/update poller
+		update(req.params.guage);
 		res.end();
 	}
 });

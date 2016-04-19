@@ -6,9 +6,11 @@ html
 	body
 		header
 			h1#h= name
+		a(href="/")
+			h1#back < Back
 		div.colset
 			div.col
-				p poop
+				img(src="/images/" + name + ".png").preview
 			div.col
 				p.description= description
 				pre= "Interval: " + interval/1000 + " secs"
