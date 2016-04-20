@@ -2,7 +2,7 @@
 
 ##Interchangeable, connected gauges.
 
-T-10 (4096)'s entry for the imaginethis.io IoT competition
+T-10 (FTC 4096)'s entry for the imaginethis.io IoT competition
 
 **gauge** opens your tabletop into a world of Internet-connected data possibilities. Simply select the data you'd like to show, and print the unique gauge face to affix to your device.
 
@@ -38,7 +38,7 @@ Support for metrics such as these are built-in to the gauge project. You can sim
 
 Hardware-wise, we used a Particle Photon generously provided by Microsoft/FIRST, as well as a standard PWM servo.
 
-For software, as the emphasis was web services, we opted for a Node.JS web stack. In particular, we used the Express web framework, the Pug templating engine, and Particle's own API wrapper to control the hardware.
+For software, as the emphasis was web services, we opted for a Node.JS web stack. In particular, we used the Express web framework, the Pug templating engine, and Particle's own API wrapper to control the hardware. To scrape data, we used a parser called cheerio. For realtime twitter updates, we used the official twitter module.
 
 ##Implementation
 
