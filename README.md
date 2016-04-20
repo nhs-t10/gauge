@@ -30,6 +30,10 @@ Support for metrics such as these are built-in to the gauge project. You can sim
 
 *The facebook gauge and configuration in action. The likes are polled automatically every few minutes from facebook.com after the user defines which page to represent.*
 
+![weather](images/weather.gif)
+
+*The wunderground gauge updated regularly to the forecasted conditions in the given area, allowing for easy indication of the local weather.*
+
 ##The Technology
 
 Hardware-wise, we used a Particle Photon generously provided by Microsoft/FIRST, as well as a standard PWM servo.
