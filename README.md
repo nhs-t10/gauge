@@ -1,4 +1,5 @@
-# gauge
+![gauge](images/banner.png)
+
 T-10 (4096)'s entry for the imaginethis.io IoT competition
 
 **gauge** opens your tabletop into a world of Internet-connected data possibilities. Simply select the data you'd like to show, and print the unique gauge face to affix to your device.
@@ -8,6 +9,8 @@ The data your gauge can display ranges from the weather, to presidential delegat
 And it's fully automated and easily customizable, thanks to our web interface and servo daemon.
 
 ##FIRST Robotics
+
+![gif](images/tweet.gif)
 
 As the need for an online presence of FIRST teams has only been increasing, it's important to keep track of the metrics which can define a team's success in outreach.
 
