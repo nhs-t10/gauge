@@ -9,7 +9,7 @@ And it's fully automated and easily customizable, thanks to our web interface an
 
 ##FIRST Robotics
 
-As the need for an online presence of FIRST teams have only been increasing, it's important to keep track of its corresponding metrics.
+As the need for an online presence of FIRST teams has only been increasing, it's important to keep track of the metrics which can define a team's success in outreach.
 
 From the number of a team's twitter followers, to the success of a hashtag, to the progress of a GoFundMe fundraiser, displaying this information in a personal, passive setting can prove extremely useful.
 
