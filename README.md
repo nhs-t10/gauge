@@ -26,7 +26,7 @@ From the number of a team's twitter followers, to the success of a hashtag, to t
 
 Support for metrics such as these are built-in to the gauge project. You can simply select, configure and print any metric to your desire within seconds. Our server will then query the corresponding web services automatically.
 
-![fb](images/full.jpg)
+![fb](images/full.JPG)
 
 *The facebook gauge and configuration in action. The likes are polled automatically every few minutes from facebook.com after the user defines which page to represent.*
 
