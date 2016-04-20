@@ -8,7 +8,7 @@ exports.get = (callback) => {
 		"User-Agent": "Mozilla/5.0"
 	}}, (err, res, body) => {
 		let $ = cheerio.load(body);
-		const likes = $("#PagesLikesCountDOMID").text().split(" ")[0];
+		const likes = $("#PagesLikesCountDOMID").text().split(" ")[0].replace(/\,/g, "");
 		callback(180/1000 * likes);
 	});
 };
