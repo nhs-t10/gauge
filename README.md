@@ -32,7 +32,20 @@ Support for metrics such as these are built-in to the gauge project. You can sim
 
 ![weather](images/weather.gif)
 
-*The wunderground gauge updated regularly to the forecasted conditions in the given area, allowing for easy indication of the local weather.*
+*The wunderground gauge is updated regularly to the forecasted conditions in the given area, allowing for easy indication of the local weather.*
+
+##Gauges
+
+Most gauges take full advantage of the data the internet has to offer, or at the very least, are completely remotely configurable. These include:
+
+* **Bern-O-Meter** - scrapes the delegate count of Bernie Sanders for the democratic primary
+* **Days Till** - Uses the remote server's calendar to calculate the days remaining until a FIRST local competition
+* **Facebook** - tracks the likes on a team's facebook page
+* **Followers** - tracks the number followers of a team's twitter account
+* **Fundraiser** - tracks the progress of a team's GoFundMe page
+* **Pollen** - tracks pollen.com/wunderground's pollen index
+* **Twitter** - tracks the popularity of a twitter hashtag in real time
+* **Weather** - gives a weather condition forecast via wunderground
 
 ##The Technology
 
