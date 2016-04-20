@@ -1,1 +1,1 @@
-{"name":"fundraiser","description":"test gauge pls ignore","interval":150000,"params":{"position":"0"},"_locals":{}}
+{"name":"fundraiser","description":"raise that $$$","interval":150000,"params":{"goFundMeURL":""},"_locals":{}}
