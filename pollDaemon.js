@@ -17,9 +17,10 @@ exports.poll = (gauge) => {
 };
 
 const sendToGauge = (value) => {
+	console.log(value);
 	const query = {deviceId: deviceId, name: "servo", argument: value.toString(), auth: token};
-	particle.callFunction(query).then(() => {
+	/*particle.callFunction(query).then(() => {
 	}, (err) => {
 		if(err) console.log(err);
-	});
+	});*/
 };

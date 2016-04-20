@@ -7,7 +7,7 @@ let wunder = new wundernode(manifest.params.wundergroundApiKey);
 
 exports.get = (callback) => {
 	wunder.forecast().request(manifest.params.zipCode, (err, obj) => {
-		if(!err) {
+		if(!err && obj.forecast) {
 			const forecast = obj.forecast.simpleforecast.forecastday[0].icon;
 			let pos = 0;
 			//thanks littlebits for this method
